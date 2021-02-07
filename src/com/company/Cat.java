@@ -24,7 +24,7 @@ public class Cat {
             plate.decreaseFood(appetite);
             satiety = true;
         } else {
-            System.out.println("Я вижу дно миски, хозяин наложи еды я голоден");
+            System.out.println("Я вижу дно миски: хозяин, положи еды - я голоден");
         }
     }
 
