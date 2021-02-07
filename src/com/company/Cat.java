@@ -20,8 +20,11 @@ public class Cat {
     }
 
     public void eat(Plate plate){
-        if (plate.decreaseFood(appetite)) {
+        if (plate.getFood() > appetite) {
+            plate.decreaseFood(appetite);
             satiety = true;
+        } else {
+            System.out.println("Я вижу дно миски, хозяин наложи еды я голоден");
         }
     }
 
