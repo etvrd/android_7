@@ -20,20 +20,19 @@ public class Cat {
     }
 
     public void eat(Plate plate){
-        if (plate.getFood() > appetite) {
+        if (plate.getFood() >= appetite) {
             plate.decreaseFood(appetite);
             satiety = true;
+            System.out.println("Котеечка покушал и сыт.");
         } else {
-            System.out.println("Я вижу дно миски: хозяин, положи еды - я голоден");
+            System.out.println("Нужно досыпать еды!");
         }
     }
 
     @Override
     public String toString() {
-        return "Cat{" +
-                "name='" + name + '\'' +
-                ", appetite=" + appetite +
-                ", satiety=" + satiety +
-                '}';
+        return "Котейка{" +
+                "имя='" + name + '\'' +
+                ", аппетит=" + appetite +'}';
     }
 }
